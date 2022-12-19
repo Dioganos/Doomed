@@ -116,3 +116,38 @@ def aciklamaSekmesi():
     root2.after(25000, lambda: root2.destroy())
 
     root2.mainloop()
+
+
+def sonSekme():
+
+
+    pY = random.randint(0, 900)
+    pX = random.randint(0, 1600)
+
+    root2 = tk.Tk()
+
+    root2.wm_attributes("-topmost",True)
+    root2.wm_attributes("-disabled",True)
+    root2.wm_attributes("-transparentcolor","black")
+    root2.config(bg="black")
+
+    # sekmedeki butonları kaldıran ve sekmeyi çerçevesiz yapan kod
+    root2.overrideredirect(True)
+
+    # sekmenin boyutunu ayarlamayı kapatan kod
+    root2.resizable(False, False)
+
+    root2.geometry("1920x1080")
+
+    text = tk.Text(root2, bg="black", fg="red", bd=0, spacing1=5, font=('Stencil Std', 17, 'bold'))
+    text.place(x=pX,y=pY)
+    otomatikYazi(text, "1.0", "Tebrikler. Bilgisayarina virüs bulaştirdin\n"
+                              "Bu virüsten kurtulmak için  \n bir testi geçmen gerekiyor\n"
+                              "Bu test bir oyun olacak\n"
+                              "Eger oyunu kazanabilirsen virüsten \n kurtulacaksin\n"
+                              "Aksi takdirde oyunu geçene kadar \n virüs çalişmaya devam edecektir\n"
+                              "Kolay gelsin\n"
+                              "Bu ekran  kendini kapatacak \n ve oyun başlayacaktir")
+
+    root2.after(25000, lambda: root2.destroy())
+    root2.mainloop()

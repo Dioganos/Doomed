@@ -1,12 +1,14 @@
 import first
 from threading import Thread
-import _thread
+import os
 
 
 def Yazilar():
     first.kafatasiSekmesi()
-    for i in range(0, 30):
+    for i in range(0, 29):
         Thread(target= first.aciklamaSekmesi).start()
+    first.sonSekme()
+    os.system('python main.py')
 
 
 def Lock():
@@ -14,5 +16,3 @@ def Lock():
 
 Thread(target=Lock).start()
 Thread(target=Yazilar).start()
-
-
