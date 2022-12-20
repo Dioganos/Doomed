@@ -2,8 +2,6 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from itertools import count, cycle
 import random
-from threading import Thread
-
 
 class ImageLabel(tk.Label):
 

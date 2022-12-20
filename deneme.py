@@ -1,1 +1,0 @@
-exec(open("./game/main.py").read())

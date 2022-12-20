@@ -29,7 +29,6 @@ class ObjectRenderer:
 
     def enemyCount(self, eC):
         for i, char in enumerate(str(eC)):
-            print((i * self.digit_size))
             self.screen.blit(self.digits[char], ((i * self.digit_size) + (WIDTH - 190), 0))
 
     def game_over(self):
