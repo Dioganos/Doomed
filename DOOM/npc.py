@@ -200,9 +200,9 @@ class CacoDemonNPC(NPC):
         super().__init__(game, path, pos, scale, shift, animation_time)
         self.attack_dist = 1.0
         self.health = 200
-        self.attack_damage = 20
+        self.attack_damage = 30
         self.speed = 0.05
-        self.accuracy = 0.35
+        self.accuracy = 0.60
 
 class CyberDemonNPC(NPC):
     def __init__(self, game, path='DOOM/resources/sprites/npc/cyber_demon/0.png', pos=(11.5, 6.0),

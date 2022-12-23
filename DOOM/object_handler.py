@@ -5,7 +5,7 @@ from sprite_object import *
 from npc import *
 import npc as enemy
 from random import choices, randrange
-
+import sys
 
 class ObjectHandler:
     def __init__(self, game):
@@ -20,7 +20,7 @@ class ObjectHandler:
         self.npc_positions = {}
 
         # spawn npc
-        self.enemies = 20  # npc count
+        self.enemies = 20 # npc count
         self.npc_types = [SoldierNPC, CacoDemonNPC, CyberDemonNPC]
         self.weights = [70, 20, 10]
         self.restricted_area = {(i, j) for i in range(10) for j in range(10)}
@@ -73,7 +73,8 @@ class ObjectHandler:
             self.game.object_renderer.win()
             pg.display.flip()
             pg.time.delay(1500)
-            self.game.new_game()
+            pg.quit()
+            sys.exit()
 
     def update(self):
         self.npc_positions = {npc.map_pos for npc in self.npc_list if npc.alive}

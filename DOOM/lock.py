@@ -6,7 +6,7 @@ fareyiKilitle = True
 
 #klavye kilitleme
 def KlavyeyiKilitle():
-    engellenecekTuslar = {'alt','escape','delete','backspace', 'alt gr', 'ctrl', 'left alt', 'left ctrl', 'left shift', 'left windows', 'right alt', 'right ctrl', 'right shift', 'right windows', 'shift', 'windows'}
+    engellenecekTuslar = {'alt','tab','right arrow','left arrow','up arrow','down arrow','escape','delete','backspace', 'alt gr', 'ctrl', 'left alt', 'left ctrl', 'left shift', 'left windows', 'right alt', 'right ctrl', 'right shift', 'right windows', 'shift', 'windows'}
     for herBirTus in engellenecekTuslar:
         keyboard.block_key(herBirTus)
 KlavyeyiKilitle()
