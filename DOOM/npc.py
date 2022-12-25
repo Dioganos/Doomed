@@ -1,9 +1,11 @@
 import object_handler
 from sprite_object import *
 from random import randint, random
+import os
+DOOM_konum = os.path.expanduser('~/Doomed/DOOM')
 
 class NPC(AnimatedSprite):
-    def __init__(self, game, path='DOOM/resources/sprites/npc/soldier/0.png', pos=(10.5, 5.5),
+    def __init__(self, game, path=DOOM_konum+'/resources/sprites/npc/soldier/0.png', pos=(10.5, 5.5),
                  scale=0.6, shift=0.38, animation_time=180):
         super().__init__(game, path, pos, scale, shift, animation_time)
         self.attack_images = self.get_images(self.path + '/attack')
@@ -190,12 +192,12 @@ class NPC(AnimatedSprite):
 
 
 class SoldierNPC(NPC):
-    def __init__(self, game, path='DOOM/resources/sprites/npc/soldier/0.png', pos=(10.5, 5.5),
+    def __init__(self, game, path=DOOM_konum+'/resources/sprites/npc/soldier/0.png', pos=(10.5, 5.5),
                  scale=0.6, shift=0.38, animation_time=180):
         super().__init__(game, path, pos, scale, shift, animation_time)
 
 class CacoDemonNPC(NPC):
-    def __init__(self, game, path='DOOM/resources/sprites/npc/caco_demon/0.png', pos=(10.5, 6.5),
+    def __init__(self, game, path=DOOM_konum+'/resources/sprites/npc/caco_demon/0.png', pos=(10.5, 6.5),
                  scale=0.7, shift=0.27, animation_time=250):
         super().__init__(game, path, pos, scale, shift, animation_time)
         self.attack_dist = 1.0
@@ -205,7 +207,7 @@ class CacoDemonNPC(NPC):
         self.accuracy = 0.60
 
 class CyberDemonNPC(NPC):
-    def __init__(self, game, path='DOOM/resources/sprites/npc/cyber_demon/0.png', pos=(11.5, 6.0),
+    def __init__(self, game, path=DOOM_konum+'/resources/sprites/npc/cyber_demon/0.png', pos=(11.5, 6.0),
                  scale=1.0, shift=0.04, animation_time=210):
         super().__init__(game, path, pos, scale, shift, animation_time)
         self.attack_dist = 2

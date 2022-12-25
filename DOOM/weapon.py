@@ -1,8 +1,9 @@
 from sprite_object import *
-
+import os
+DOOM_konum = os.path.expanduser('~/Doomed/DOOM')
 
 class Weapon(AnimatedSprite):
-    def __init__(self, game, path='DOOM/resources/sprites/weapon/crowbar/0.png', scale=1, animation_time=90):
+    def __init__(self, game, path=DOOM_konum+'/resources/sprites/weapon/crowbar/0.png', scale=1, animation_time=90):
         super().__init__(game=game, path=path, scale=scale, animation_time=animation_time)
         self.images = deque(
             [pg.transform.smoothscale(img, (self.image.get_width() * scale, self.image.get_height() * scale))

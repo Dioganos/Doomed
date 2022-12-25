@@ -2,6 +2,8 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from itertools import count, cycle
 import random
+import os
+DOOM_konum = os.path.expanduser('~/Doomed/DOOM')
 
 class ImageLabel(tk.Label):
 
@@ -72,7 +74,7 @@ def kafatasiSekmesi():
     root.geometry("512x431+%d+%d" % (x_koordinati, y_koordinati))
     lbl = ImageLabel(root)
     lbl.pack()
-    lbl.load('DOOM/download.gif')
+    lbl.load(DOOM_konum+'/download.gif')
 
     root.after(5000, lambda: root.destroy())
 

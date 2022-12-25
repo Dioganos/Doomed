@@ -1,11 +1,12 @@
 import pygame as pg
-
+import os
+DOOM_konum = os.path.expanduser('~/Doomed/DOOM')
 
 class Sound:
     def __init__(self, game):
         self.game = game
         pg.mixer.init()
-        self.path = 'DOOM/resources/sound/'
+        self.path = DOOM_konum+'/resources/sound/'
         self.crowbar = pg.mixer.Sound(self.path + 'cbar_miss1.wav')
         self.crowbar.set_volume(0.5)
         self.hitsound = pg.mixer.Sound(self.path + 'cbar_hitbod1.wav')

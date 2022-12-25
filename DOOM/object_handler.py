@@ -1,20 +1,21 @@
 import pygame.font
-
 import npc
 from sprite_object import *
 from npc import *
 import npc as enemy
 from random import choices, randrange
 import sys
+import os
+DOOM_konum = os.path.expanduser('~/Doomed/DOOM')
 
 class ObjectHandler:
     def __init__(self, game):
         self.game = game
         self.sprite_list = []
         self.npc_list = []
-        self.npc_sprite_path = 'DOOM/resources/sprites/npc/'
-        self.static_sprite_path = 'DOOM/resources/sprites/static_sprites/'
-        self.anim_sprite_path = 'DOOM/resources/sprites/animated_sprites/'
+        self.npc_sprite_path = DOOM_konum+'/resources/sprites/npc/'
+        self.static_sprite_path = DOOM_konum+'/resources/sprites/static_sprites/'
+        self.anim_sprite_path = DOOM_konum+'/resources/sprites/animated_sprites/'
         add_sprite = self.add_sprite
         add_npc = self.add_npc
         self.npc_positions = {}
