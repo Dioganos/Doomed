@@ -1,4 +1,4 @@
-# Dikkat edilmesi gerekenler
+# Dikkat edilmesi gerekenler:
 * Program çalışıtırldığında kendisiyle aynı konumda olan her şeyi farklı bir konuma taşıyacaktır o yüzden denerken mutlaka yeni bir klasör açın onun içindeyken deneyin
 * Projenin son halini (yemlemeye hazır halini) Releases kısmından indirebilirsinz.
 

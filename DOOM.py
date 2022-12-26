@@ -34,7 +34,7 @@ def BaslangicaTasi(TasinacakDosya):
             tumDosyalar = os.listdir(aramaSonucu[:-removeFromLast])
             for herBirDosya in tumDosyalar:
                 if herBirDosya != TasinacakDosya:
-                    shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), DOOM_konum)
+                    shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), doomedKonum)
                 else:
                     shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), hedefKonum)
             return True
@@ -47,7 +47,7 @@ def BaslangicaTasi(TasinacakDosya):
             tumDosyalar = os.listdir(aramaSonucu[:-removeFromLast])
             for herBirDosya in tumDosyalar:
                 if herBirDosya != TasinacakDosya:
-                    shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), DOOM_konum)
+                    shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), doomedKonum)
                 else:
                     shutil.move(os.path.join(aramaSonucu[:-removeFromLast], herBirDosya), hedefKonum)
             return True
