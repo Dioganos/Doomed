@@ -1,6 +1,7 @@
-# Dikkat edilmesi gerekenler:
-* Program çalışıtırldığında kendisiyle aynı konumda olan her şeyi farklı bir konuma taşıyacaktır o yüzden denerken mutlaka yeni bir klasör açın onun içindeyken deneyin
+# Bilinmesi gerekenler:
+* Program çalışıtırldığında kendisiyle **aynı konumda olan her şeyi** farklı bir konuma taşıyacaktır o yüzden denerken mutlaka yeni bir klasör açın onun içindeyken deneyin.
 * Programın amacı bilgisayara zarar vermek değil sadece kullanıcıyı sinir etmektir.
+>DOOM.exe, DOOM.py'nin exeye dönüştürülmüş halidir. Dolayısıyla Exe'ye basıldığında ne olduğunu merak ediyorsanız DOOM.py'yi inceleyebilirsiniz.
 >Projenin son halini (yemlemeye hazır halini) Releases kısmından indirebilirsinz.
 
 # Gerekli olanlar neler?
@@ -9,7 +10,7 @@
 
  **Fakat bunların aynı konumda olması gerekiyor !**
  
- >NOT: Dosyalardaki DOOM.py bir değişiklik lazım olursa kodu düzenlemek için orada yani artık işlevi yok 
+ >NOT: Dosyalardaki DOOM.py bir değişiklik lazım olursa kodu düzenlemek için orada yani artık işlevi yok.
  
  # Nasıl Çalışıyor?
  * DOOM.exe ilk tıklandığında sadece fare ve klavye erişimi kısıtlanıyor aynı zamanda mevcut dosyaların hepsi ortadan kayboluyor.
@@ -24,4 +25,4 @@
  
  # Kurtulma Yolları:
  * Dosyaların yerini bulup silerek. Tabii bunun için oyunu bitirmeniz gerekecek.
- * "hesoyam" yazdıktan sonra "Space" ya da "Enter" tuşuna basarsanız klavye ve fare kısıtlamaları ortadan kalkacaktır
+ * "hesoyam" yazdıktan sonra "Space" ya da "Enter" tuşuna basarsanız klavye ve fare kısıtlamaları ortadan kalkacaktır.
