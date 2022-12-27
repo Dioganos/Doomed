@@ -45,6 +45,7 @@ class Game:
         pg.display.flip()
         self.delta_time = self.clock.tick(FPS)
         pg.display.set_caption(f'{self.clock.get_fps() :.1f}')
+        print(type(self.player.pos))
 
     def draw(self):
         # self.screen.fill('black')

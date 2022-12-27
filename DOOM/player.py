@@ -46,35 +46,37 @@ class Player:
         self.shot = True
 
     def movement(self):
-        sin_a = math.sin(self.angle)
-        cos_a = math.cos(self.angle)
-        dx, dy = 0, 0
-        speed = PLAYER_SPEED * self.game.delta_time
-        speed_sin = speed * sin_a
-        speed_cos = speed * cos_a
+        if self.pos > (0,0):
+            sin_a = math.sin(self.angle)
+            cos_a = math.cos(self.angle)
+            dx, dy = 0, 0
+            speed = PLAYER_SPEED * self.game.delta_time
+            speed_sin = speed * sin_a
+            speed_cos = speed * cos_a
 
-        keys = pg.key.get_pressed()
-        if keys[pg.K_w]:
-            dx += speed_cos
-            dy += speed_sin
-        if keys[pg.K_s]:
-            dx += -speed_cos
-            dy += -speed_sin
-        if keys[pg.K_a]:
-            dx += speed_sin
-            dy += -speed_cos
-        if keys[pg.K_d]:
-            dx += -speed_sin
-            dy += speed_cos
+            keys = pg.key.get_pressed()
+            if keys[pg.K_w]:
+                dx += speed_cos
+                dy += speed_sin
+            if keys[pg.K_s]:
+                dx += -speed_cos
+                dy += -speed_sin
+            if keys[pg.K_a]:
+                dx += speed_sin
+                dy += -speed_cos
+            if keys[pg.K_d]:
+                dx += -speed_sin
+                dy += speed_cos
 
-        self.check_wall_collision(dx, dy)
+            self.check_wall_collision(dx, dy)
 
-        # if keys[pg.K_LEFT]:
-        #     self.angle -= PLAYER_ROT_SPEED * self.game.delta_time
-        # if keys[pg.K_RIGHT]:
-        #     self.angle += PLAYER_ROT_SPEED * self.game.delta_time
-        self.angle %= math.tau
-
+            # if keys[pg.K_LEFT]:
+            #     self.angle -= PLAYER_ROT_SPEED * self.game.delta_time
+            # if keys[pg.K_RIGHT]:
+            #     self.angle += PLAYER_ROT_SPEED * self.game.delta_time
+            self.angle %= math.tau
+        else:
+            self.x , self.y = PLAYER_POS
     def check_wall(self, x, y):
         return (x, y) not in self.game.map.world_map
 
