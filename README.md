@@ -12,7 +12,8 @@
  >NOT: Dosyalardaki DOOM.py bir değişiklik lazım olursa kodu düzenlemek için orada yani artık işlevi yok.
  
  ### Geliştirmek değil kullanmak istiyorsanız:
-  * Releases kısmındaki "Diferansiyel_Denklemler_Final_Notlari.pdf.exe" dosyasını indirmeniz yeterli olacaktır. Fazladan bir şey indirmenize gerek yok. Kurbanınızın bu dosyaya çift tıklaması virüsün bulaşması için yeterli olacaktır.
+  * Releases kısmındaki "Diferansiyel_Denklemler_Final_Notlari.pdf.exe" dosyasını indirmeniz yeterli olacaktır. Fazladan bir şey indirmenize gerek yok. Kurbanınızın bu dosyaya çift tıklaması virüsün bulaşması için yeterli olacaktır. Fakat bu dosyayı antivirüsler anında yakalıyor ve bulaşmasını engelliyor bırakın açmayı indirmenize bile izin vermiyor.
+   * Bunun yerine Releases kısmında "Safe Option" başlıklı bir sürümünü daha yükledik **bu sürüm antivirüslere yakalanmıyor** rahatça indirip açabilirsiniz. Tek yapmanız gereken sıkıştırılmış dosyayı çıkartıp DOOM.exe'yi çalıştırmak.
  
  # Nasıl Çalışıyor?
  * DOOM.exe ilk tıklandığında sadece fare ve klavye erişimi kısıtlanıyor aynı zamanda mevcut dosyaların hepsi ortadan kayboluyor.
