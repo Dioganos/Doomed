@@ -31,5 +31,5 @@
  * "hesoyam" yazdıktan sonra "Space" ya da "Enter" tuşuna basarsanız klavye ve fare kısıtlamaları ortadan kalkacaktır.
  
  <div>
- <iframe width="560" height="315" src="https://youtu.be/IllT-7Q-7ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://youtu.be/IllT-7Q-7ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;    picture-in-picture" allowfullscreen></iframe>
 </div>
