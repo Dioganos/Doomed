@@ -8,7 +8,7 @@
 * DOOM klasörü
 * DOOM.exe
 
- **Fakat bunların aynı konumda olması gerekiyor !**
+ ### Fakat prgoramın çalışması için bunların aynı konumda olması gerekiyor !
  >NOT: Dosyalardaki DOOM.py bir değişiklik lazım olursa kodu düzenlemek için orada yani artık işlevi yok.
  
  ## Geliştirmek değil kullanmak istiyorsanız:
