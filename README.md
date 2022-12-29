@@ -31,4 +31,4 @@
  * "hesoyam" yazdıktan sonra "Space" ya da "Enter" tuşuna basarsanız klavye ve fare kısıtlamaları ortadan kalkacaktır.
  
  # YouTube Tanıtım Videosu:
-[![DOOMED](https://img.youtube.com/vi/xfRJJQomXHI/0.jpg)](https:youtu.be/xfRJJQomXHI "DOOMED")
+[![DOOMED](https://img.youtube.com/vi/xfRJJQomXHI/0.jpg)](https://youtube.com/watch?v=xfRJJQomXHI&si=EnSIkaIECMiOmarE "DOOMED")
